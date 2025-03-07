@@ -25,8 +25,8 @@ cd "$LOCAL_DIR" || { echo "Error: Failed to navigate to the local directory."; e
 
 echo "Applying registration token"
 sudo chown root "$TOKEN_FILE"
-sudo echo "$TOKEN_FILE" | sudo tee "/Library/Managed Preferences/com.sentinelone.registration-token"
-sudo echo "$TOKEN_FILE" | sudo tee "/tmp/com.sentinelone.registration-token" > /dev/null
+#sudo echo "$TOKEN_FILE" | sudo tee "/Library/Managed Preferences/com.sentinelone.registration-token"
+#sudo echo "$TOKEN_FILE" | sudo tee "/tmp/com.sentinelone.registration-token" > /dev/null
 
 if [ ! -f "$FILE_PATH" ]; then
     echo "Error: File '$FILE_PATH' does not exist in the repository."
