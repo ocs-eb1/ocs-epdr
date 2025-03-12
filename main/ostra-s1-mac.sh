@@ -3,7 +3,7 @@ REPO_URL="https://github.com/chetan-ostra/ocs-epdr.git"
 BRANCH="main" 
 LOCAL_DIR="/tmp/s1"
 FILE_PATH="/tmp/s1/pkgs/Sentinel-Release-23-3-2-7123_macos_v23_3_2_7123.pkg"
-TOKEN_FILE="/tmp/s1/pkgs/com.sentinelone.registration-token"
+#TOKEN_FILE="/tmp/s1/pkgs/com.sentinelone.registration-token"
 
 if [ -d "$LOCAL_DIR" ]; then
     echo "Removing existing directory: $LOCAL_DIR"
@@ -23,8 +23,8 @@ fi
 
 cd "$LOCAL_DIR" || { echo "Error: Failed to navigate to the local directory."; exit 1; }
 
-echo "Applying registration token"
-echo "$TOKEN" | sudo tee "/tmp/com.sentinelone.registration-token" > /dev/null
+#echo "Applying registration token"
+#echo "$TOKEN" | sudo tee "/tmp/com.sentinelone.registration-token" > /dev/null
 
 if [ ! -f "$FILE_PATH" ]; then
     echo "Error: File '$FILE_PATH' does not exist in the repository."

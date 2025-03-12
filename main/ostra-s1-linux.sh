@@ -4,7 +4,7 @@ REPO_URL="https://github.com/chetan-ostra/ocs-epdr.git"
 BRANCH="main"  
 LOCAL_DIR="/tmp/s1" 
 FILE_PATH="/tmp/s1/pkgs/SentinelAgent_linux_x86_64_v23_3_2_12.deb"
-TOKEN_FILE="/tmp/s1/21578892293-Ostra-Cybersecurity/ostra-token.txt" #update token with the script and host them internally.
+#TOKEN_FILE="/tmp/s1/21578892293-Ostra-Cybersecurity/ostra-token.txt" #update token with the script and host them internally.
 
 
 if [ -d "$LOCAL_DIR" ]; then
@@ -44,12 +44,12 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "applying token"
-TOKEN=$(cat "$TOKEN_FILE")
-if [ $? -ne 0 ]; then
-    echo "error token file"
-    exit 1
-fi
+#echo "applying token"
+#TOKEN=$(cat "$TOKEN_FILE")
+#if [ $? -ne 0 ]; then
+#    echo "error token file"
+#    exit 1
+#fi
 
 /opt/sentinelone/bin/sentinelctl management token set $TOKEN
 /opt/sentinelone/bin/sentinelctl control start
